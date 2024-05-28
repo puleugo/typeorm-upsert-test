@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+
+  postgres-db:
+    image: postgres:14
+    ports:
+      - "5430:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  mysql-db:
+    image: mysql:8
+    ports:
+      - "3300:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysql
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
